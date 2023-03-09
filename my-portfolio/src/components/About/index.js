@@ -10,6 +10,7 @@ export default function AboutMe() {
             my={'2%'}
             h={'100%'}
             mb='5%'
+            bg={'blackAlpha.200'}
             boxShadow={'0 5px 10px rgba(0,0,0, 0.6)'}
         >
             <Box m={'0'} p={'2%'} mb={'20px'} >
