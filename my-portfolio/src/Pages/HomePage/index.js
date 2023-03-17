@@ -1,90 +1,86 @@
 
-import { Box, Center, Flex, Heading, Image, Stack } from '@chakra-ui/react';
-import Projects from './../../components/Projects/index';
-import Perfil from '../../assets/imagem/fotoPerfil2.png'
-import AboutMe from '../../components/About';
+import { Box, Center, Divider, Flex, Heading, Image, Stack, useColorModeValue } from '@chakra-ui/react';
+import Perfil from '../../assets/imagem/fotoPerfil2.png';
+import Type from '../../components/typeWriter/index.';
+import PillPity from 'pill-pity';
+import SideBarMenu from '../../components/SideBarMenu';
 
-import Skills from '../../components/Skills';
-import CaptionCarousel from '../../components/testes';
 
 export default function HomePage() {
+    // color mode da textura background
+    const patterFill = useColorModeValue("black", "blackAlpha.900");
+
     return (
-        <>
-            <Box boxShadow={'0 5px 10px rgba(0,0,0, 0.6)'} h={'100%'} m='0 auto' w={'90vw'}>
-                <Box rounded={'10px'} bg={'blackAlpha.400'} boxShadow={'0 5px 10px rgba(0,0,0, 0.6)'} h={'full'} w='90vw' m='0 auto'   >
-                    <Flex h={'full'}
-                        justifyContent={'start'}
+
+
+        <Box minH={'100vh'}>            
+            <SideBarMenu />
+            {/* Textura background: */}
+            <PillPity
+                position={'absolute'}
+                zIndex={-1}
+                pattern='circuit-board'
+                h='full'
+                as={Flex}
+                align="center"
+                justify="center"
+                fontWeight="extrabold"
+                boxSize="100%"
+                patternFill={patterFill}
+                bgColor="blackAlpha.400"
+                patternOpacity={0.3}
+            />
+
+
+            <Flex 
+                h={'90vh'}
+                flexDir={['', 'column']}
+                justifyContent={'center'}
+                alignItems={'center'}>
+                <Flex
+                    flexDir={'column'}
+                    w={'full'}
+                    h={"70vh"}
+                    justifyContent='center'
+                    alignItems={'center'}>
+
+                    <Flex
+                        flexDir={['column','row']}
+                        h={['80vh','']}
+                        justifyContent='center'
                         alignItems={'center'}
-                        my={'2%'}
+                        w='70vw'>
 
-                    >
-                        <Flex w={'full'} h={"full"} flexDir={'column'} justifyContent='center' alignItems={'center'}>
+                     
+                        <Heading size={'2xl'} w={['100%','50%']} 
+                        textShadow={'0 5px 15px  rgba(0,0,0, 0.6)'} >
+                            <Type />
+                        </Heading>
 
-                            <Heading textShadow={'0 5px 10px rgba(0,0,0, 0.6)'} > Desenvolvedor Web Full Stack</Heading>
-                            <Flex justifyContent='center' alignItems={'center'} gap='1%' >
-                                {/* <FaReact size={'5%'} />
-                                <SiJavascript size={'5%'} />
-                                <SiChakraui size={'5%'} />
-                                <FaHtml5 size={'4.3%'} />
-                                <IoLogoCss3 size={'5%'} />
-                                <SiStyledcomponents size={'5%'} /> */}
-                            </Flex>
-                            <Stack w={'300px'} rounded={'25px'} shadow={'0 5px 15px rgba(0 ,0, 0, 0.2)'} >
-                                <Image position={'relative'} src={Perfil} />
+
+                        <Box
+                            rounded={'50%'}
+                            w='min-content'
+                            shadow={'0 5px 20px 5px rgba(0,0,0, 0.6)'}>
+                            <Stack w={['250px','400px']}  >
+                                <Image
+                                   bg={'blackAlpha.600'}
+                                    rounded='50%'
+                                    position={'relative'}
+                                    src={Perfil} />
                             </Stack>
-                            <Box w='75vw' 
-                                m={'0 auto'}>
-                               
-                                <Skills />
-                            </Box>
-                        </Flex>
-
+                        </Box>
                     </Flex>
-                    {/* <Box
-                           w={'min-content'}
-                            zIndex={'-1'}
-                            bg={'cadetblue'}                            
-                            transform={'rotate(20deg)'}
-                            m='0 auto'
-                            left='400px'
-                            rounded={'8px'}
-                            boxShadow={'0 5px 15px rgba(0 ,0, 0, 0.2)'}
-                        > 
-                        HTML
-                        </Box> */}
-                </Box>
-                <Flex
-                    border='0.7px solid #f0f0f1'
-                    margin='10px 20px'
-                ></Flex>
-                {/* <Box  w='90vw'
-                    m={'0 auto'}>
-                   <Center><Heading>Habilidades</Heading></Center> 
-                  <Skills/>      
-                </Box> */}
-                <Box w='90vw'
-                    m={'0 auto'}>
-                    <Projects />
-                </Box>
-                <Flex
-                    border='0.7px solid #f0f0f1'
-                    margin='10px 20px'
-                ></Flex>
-                <Box w='90vw' mb='5%'
-                    m={'0 auto'}>
-                    <AboutMe />
-                </Box>
-                <Flex
-                    border='0.7px solid #f0f0f1'
-                    margin='10px 20px'
-                ></Flex>
+                </Flex>
+            </Flex>           
+        </Box>
 
-            </Box>
-            <Box w='75vw' 
-                                m={'0 auto'}>
-                               
-                                <CaptionCarousel/>
-                            </Box>
-        </>
+
+
+
+
+
+
+
     )
 }

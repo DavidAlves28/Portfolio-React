@@ -5,8 +5,9 @@ export default function ColorsMode(props) {
   const { colorMode, toggleColorMode } = useColorMode();
   return (
    
-    <Flex h="100vh" justifyContent="center" alignItems="center">
+    <Flex  justifyContent="center" alignItems="center">
       <Button
+        
         aria-label="Toggle Color Mode"
         onClick={toggleColorMode}
         _focus={{ boxShadow: 'none' }}

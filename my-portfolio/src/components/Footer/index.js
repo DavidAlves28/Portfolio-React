@@ -19,8 +19,8 @@ import {
       <chakra.button
         bg={useColorModeValue('blackAlpha.100', 'whiteAlpha.100')}
         rounded={'full'}
-        w={8}
-        h={8}
+        w={10}
+        h={10}
         target={'_blank'}
         cursor={'pointer'}
         as={'a'}
@@ -41,20 +41,19 @@ import {
   export default function SimpleFooter() {
     return (
       <Box
-        bg={useColorModeValue('gray.50', 'gray.900' ,'')}
-        color={useColorModeValue('gray.700', 'gray.200')}         
+            
         w='100%'
         >
         <Container
           as={Stack}
-          maxW={'6xl'}
-          py={4}
-          direction={{ base: 'column', md: 'row' }}
+          w='100%'
+          py={2}
+          h='20vh' 
+          direction={{ base: 'column', md: 'column' }}
           spacing={4}
-          justify={{ base: 'center', md: 'space-between' }}
+          justify={{ base: 'center', md: 'space-around' }}
           align={{ base: 'center', md: 'center' }}>
-          <Text>© 2023 David Alves Costa</Text>
-          <Stack direction={'row'} spacing={6}>
+          <Stack direction={'column'} spacing={6}>
             <SocialButton label={'Linkedin'} href={'https://www.linkedin.com/in/david-alves-costa-7a2b90145/'}>
               <FaLinkedin />
             </SocialButton>
@@ -62,6 +61,7 @@ import {
               <FaGithub  />
             </SocialButton>
           </Stack>
+          <Text>© 2023 David Alves Costa</Text>
         </Container>
       </Box>
     );
