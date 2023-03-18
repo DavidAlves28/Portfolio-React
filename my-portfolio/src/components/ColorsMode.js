@@ -11,9 +11,10 @@ export default function ColorsMode(props) {
         aria-label="Toggle Color Mode"
         onClick={toggleColorMode}
         _focus={{ boxShadow: 'none' }}
-        w="fit-content"
+        // w="max-content"
+      
         {...props}>
-        {colorMode === 'light' ? <BsMoonStarsFill /> : <BsSun />}
+        {colorMode === 'light' ? <BsMoonStarsFill size='full'  /> : <BsSun  size='full'/>}
       </Button>
     </Flex>
   );

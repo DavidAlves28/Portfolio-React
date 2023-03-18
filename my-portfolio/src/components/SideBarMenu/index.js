@@ -11,24 +11,26 @@ import {
     DrawerContent,
     Text,
     useDisclosure,
+    Center,
+    Button,
 } from '@chakra-ui/react';
 
 import { FcTimeline, FcIdea, FcHome, FcAbout } from "react-icons/fc";
-
 import { FiMenu } from 'react-icons/fi';
 import ColorsMode from '../ColorsMode';
 import SimpleFooter from '../Footer';
 import { useNavigate } from 'react-router-dom';
-import { goToHome, goToProjetos } from "../../Routes/coordinator";
-import Projetos from '../../Pages/Projetos';
+import { goToHome, goToProjetos, goToSkills } from "../../Routes/coordinator";
 
+import background from '../../assets/imagem/background.jpg'
 
 export default function SideBarMenu({ children }) {
-   
+
     const { isOpen, onOpen, onClose } = useDisclosure();
     return (
         <Box bg={useColorModeValue('gray.100', 'gray.900')}>
             <SidebarContent
+                // w='14vw'
                 onClose={() => onClose}
                 display={{ base: 'none', md: 'block' }}
             />
@@ -39,17 +41,18 @@ export default function SideBarMenu({ children }) {
                 onClose={onClose}
                 returnFocusOnClose={false}
                 onOverlayClick={onClose}
-                size="100%">
+                size="full"
+            >
                 <DrawerContent>
                     <SidebarContent onClose={onClose} />
                 </DrawerContent>
             </Drawer>
 
             <MobileNav display={{ base: 'flex', md: 'none' }} onOpen={onOpen} />
-            {/* <Box ml={{ base: 0, md: 60 }} >
-        {children}
-    
-      </Box> */}
+            <Box ml={{ base: 0, md: 60 }} >
+                {children}
+
+            </Box>
         </Box>
 
     );
@@ -74,7 +77,7 @@ const SidebarContent = ({ onClose, ...rest }) => {
                 mx="8"
                 justifyContent="center">
                 <CloseButton alignSelf={'end'} display={{ base: 'flex', md: 'none' }} onClick={onClose} />
-                <Text fontSize="2xl" fontFamily="monospace" fontWeight="bold">
+                <Text fontSize="3xl" fontFamily="monospace" fontWeight="bold">
                     PortFólio
 
                 </Text>
@@ -82,16 +85,18 @@ const SidebarContent = ({ onClose, ...rest }) => {
                     David Alves Costa
                 </Text>
             </Flex>
-                <NavItem onClick={()=>goToHome(navigate)} fontWeight='bold'  icon={FcHome}>Home</NavItem>
-                <NavItem onClick={()=>goToProjetos(navigate)} fontWeight='bold'  icon={FcIdea}>Projetos</NavItem>
-                <NavItem fontWeight='bold'  icon={FcTimeline}>Skills</NavItem>
-                <NavItem fontWeight='bold'  icon={FcAbout}>Sobre</NavItem>
-          
-            
-            <Box 
-            position={['','absolute']} 
-            bottom='30px'>
-                <ColorsMode />
+            <NavItem onClick={() => goToHome(navigate)} fontSize='2xl' fontWeight='bold' icon={FcHome}>Home</NavItem>
+            <NavItem onClick={() => goToProjetos(navigate)} fontSize='2xl' fontWeight='bold' icon={FcIdea}>Projetos</NavItem>
+            <NavItem onClick={() => goToSkills(navigate)} fontSize='2xl' fontWeight='bold' icon={FcTimeline}>Skills</NavItem>
+            <NavItem fontSize='2xl' fontWeight='bold' icon={FcAbout}>Sobre</NavItem>
+
+
+            <Box
+                position={['', 'absolute']}
+                bottom='30px'>
+
+                <ColorsMode  />
+                   
                 <SimpleFooter />
             </Box>
         </Box>
@@ -106,7 +111,6 @@ const NavItem = ({ icon, children, ...rest }) => {
                 align="center"
                 p="6"
                 mx="7"
-
                 borderRadius="lg"
                 role="group"
                 cursor="pointer"
@@ -117,8 +121,8 @@ const NavItem = ({ icon, children, ...rest }) => {
                 {...rest}>
                 {icon && (
                     <Icon
-                        mr="4"
-                        fontSize="30"
+                        mr="5"
+                        fontSize="40"
                         _groupHover={{
                             color: 'white',
                         }}
@@ -139,6 +143,7 @@ const MobileNav = ({ onOpen, ...rest }) => {
             ml={{ base: 0, md: 60 }}
             px={{ base: 4, md: 24 }}
             height="20"
+            
             alignItems="center"
             bg={useColorModeValue('white', 'gray.900')}
             borderBottomWidth="1px"
@@ -153,7 +158,7 @@ const MobileNav = ({ onOpen, ...rest }) => {
             />
 
             <Text fontSize="2xl" ml="8" fontFamily="monospace" fontWeight="bold">
-                PortFólio
+                PortFólio David Alves
             </Text>
 
         </Flex>

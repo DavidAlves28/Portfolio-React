@@ -1,10 +1,10 @@
 
-import { Box, Center, Divider, Flex, Heading, Image, Stack, useColorModeValue } from '@chakra-ui/react';
+import { Box, Center, Divider, Flex, Heading, Image, Link, Stack, useColorModeValue } from '@chakra-ui/react';
 import Perfil from '../../assets/imagem/fotoPerfil2.png';
 import Type from '../../components/typeWriter/index.';
 import PillPity from 'pill-pity';
 import SideBarMenu from '../../components/SideBarMenu';
-
+import { Animated } from 'react-animated-css'
 
 export default function HomePage() {
     // color mode da textura background
@@ -13,7 +13,9 @@ export default function HomePage() {
     return (
 
 
-        <Box minH={'100vh'}>            
+        <Box
+
+            minH={'100vh'}>
             <SideBarMenu />
             {/* Textura background: */}
             <PillPity
@@ -31,8 +33,9 @@ export default function HomePage() {
                 patternOpacity={0.3}
             />
 
-
-            <Flex 
+            <Flex
+                w='86vw'
+                m=' 0 auto'
                 h={'90vh'}
                 flexDir={['', 'column']}
                 justifyContent={'center'}
@@ -45,34 +48,39 @@ export default function HomePage() {
                     alignItems={'center'}>
 
                     <Flex
-                        flexDir={['column','row']}
-                        h={['80vh','']}
+                        flexDir={['column', 'row']}
+                        h={['80vh', '']}
                         justifyContent='center'
                         alignItems={'center'}
                         w='70vw'>
 
-                     
-                        <Heading size={'2xl'} w={['100%','50%']} 
-                        textShadow={'0 5px 15px  rgba(0,0,0, 0.6)'} >
+                        <Heading size={'2xl'} w={['100%', '50%']}
+                            textShadow={'0 5px 15px  rgba(0,0,0, 0.6)'} >
                             <Type />
                         </Heading>
-
-
-                        <Box
-                            rounded={'50%'}
-                            w='min-content'
-                            shadow={'0 5px 20px 5px rgba(0,0,0, 0.6)'}>
-                            <Stack w={['250px','400px']}  >
-                                <Image
-                                   bg={'blackAlpha.600'}
-                                    rounded='50%'
-                                    position={'relative'}
-                                    src={Perfil} />
-                            </Stack>
-                        </Box>
+                        <Animated
+                            animationIn='fadeInRight'
+                            animationInDuration={2000}
+                            animationOut='fadeOut'
+                            isVisible={true}
+                        >
+                            <Box
+                                rounded={'50%'}
+                                w='min-content'
+                                shadow={'0 5px 20px 5px rgba(0,0,0, 0.6)'}>
+                                <Stack w={['250px', '400px']}  >
+                                    <Image
+                                        bg={'blackAlpha.600'}
+                                        rounded='50%'
+                                        position={'relative'}
+                                        src={Perfil} />
+                                </Stack>
+                            </Box>
+                          
+                        </Animated>
                     </Flex>
                 </Flex>
-            </Flex>           
+            </Flex>
         </Box>
 
 

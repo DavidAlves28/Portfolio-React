@@ -5,3 +5,6 @@ export const goToProjetos = (navigate) =>{
 export const goToHome = (navigate) =>{ 
     navigate('/')
 } 
+export const goToSkills = (navigate) =>{ 
+    navigate('/skills')
+} 
