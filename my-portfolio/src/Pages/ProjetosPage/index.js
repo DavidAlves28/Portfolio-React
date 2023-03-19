@@ -20,10 +20,7 @@ export default function ProjectsGrid() {
       {/*////////// projeto1 /////////////////////////////////////// */}
       <Box
         w={['100vw', '75vw']}
-        m='0 auto'
-
-      >
-
+        m='0 auto'>
         <Flex
           shadow={'2xl'}
           bg='#fffff'
@@ -34,7 +31,6 @@ export default function ProjectsGrid() {
           justifyContent={['center', 'space-evenly']}
           alignItems={['self-start', 'Center']}
           flexWrap='wrap'>
-
           <Animated
             animationIn='zoomIn'
             animationInDuration={1000}
@@ -101,7 +97,7 @@ export default function ProjectsGrid() {
                     boxShadow: 'dark-lg',
                   }}
                   colorScheme={'whatsapp'}
-                  href="http://mundane-love.surge.sh"
+                  href="https://house-store-ecommerce.vercel.app/"
                   target="_blank"
                   w='50%'>
                   Ver Projeto</Button>
@@ -113,7 +109,7 @@ export default function ProjectsGrid() {
                     boxShadow: 'dark-lg',
                   }}
                   colorScheme={'whatsapp'}
-                  href="https://github.com/DavidAlves28/Game_Black-Jack"
+                  href="https://github.com/DavidAlves28/House-Store-Ecommerce"
                   target="_blank"
                   w='50%'>
                   Repositório</Button>

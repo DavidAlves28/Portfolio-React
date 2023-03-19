@@ -4,6 +4,7 @@ import { Routes , Route ,BrowserRouter} from 'react-router-dom'
 import HomePage from '../Pages/HomePage'
 import Projetos from '../Pages/ProjetosPage'
 import SkillsPage from '../Pages/SkillsPage'
+import AboutMe from '../Pages/Sobre'
 
 
 
@@ -15,8 +16,7 @@ export default function Router (){
             <Route index element={<HomePage/>}/>
             <Route path='/projetos' element={<Projetos/>}/>
             <Route path='/skills' element={<SkillsPage/>}/>
-            {/* <Route path='/sobre' element={<SobrePage/>}/> */}
-            {/* <Route  path='*' element={<ErrorPage/>}/> */}
+            <Route path='/aboutme' element={ <AboutMe/>}/>            
          </Routes>   
         </BrowserRouter>
     )

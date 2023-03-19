@@ -1,13 +1,11 @@
-import { Box, Flex, Heading, Image, Text, useColorModeValue, } from "@chakra-ui/react";
+import { Box, Divider, Flex, Heading, Stack, Text, useColorModeValue, } from "@chakra-ui/react";
 import SideBarMenu from "../../components/SideBarMenu";
 import backgroundSkill from '../../assets/imagem/background.jpg'
-import vscode from '../../assets/icons/icons8-visual-studio-100.png'
-
 import { Animated } from "react-animated-css";
 import { React } from "react";
-import { SiBootstrap, SiChakraui, SiCss3, SiExpress, SiGithub, SiHtml5, SiJavascript, SiJest, SiMysql, SiNotion, SiPostman, SiReact, SiStyledcomponents, SiTypescript, SiVercel, SiVsco } from "react-icons/si";
+import {  SiGithub,SiNotion, SiPostman, SiVercel,} from "react-icons/si";
 
-import { FaAws, FaNode, } from "react-icons/fa";
+import { BsPatchCheckFill } from "react-icons/bs";
 export default function SkillsPage() {
 
     return (
@@ -20,9 +18,7 @@ export default function SkillsPage() {
         >
 
             <SideBarMenu />
-            <Box w={['100vw', '80vw']}
-
-            >
+            <Box w={['100vw', '80vw']}>
                 <Flex
                     shadow={'dark-lg'}
                     flexDir={['column', 'row']}
@@ -36,11 +32,10 @@ export default function SkillsPage() {
                     <Box
                         rounded={'20px'}
                         mt={10}
-                        p={2}
-                        shadow={'dark-lg'}
+                        shadow={'2xl'}
                         bg={useColorModeValue('#22222', 'gray.900')}
-                        color={useColorModeValue('blackAlpha.800', 'whiteAlpha.800')}
-                        minH='60vh'
+                        color={useColorModeValue('whiteAlpha.800')}
+                        h='50vh'
                         w={['', '40%']}>
                         <Heading
                             align='center'
@@ -48,22 +43,56 @@ export default function SkillsPage() {
                             p={7}
                             fontWeight={'extrabold'}
                             letterSpacing='2px' >Front-end </Heading>
-
                         <Animated animationIn="zoomIn" >
                             <Flex
-                                justifyContent={'space-evenly'}
+                                h='80%'
+                                flexDir={['column', 'row']}
+                                justifyContent={'space-around'}
                                 alignContent='center'
                                 gap={2}
+                                p={5}
                                 flexWrap={'wrap'} >
-                                <SiReact size='25%' />
-                                <SiJavascript size="25%" />
-                                <SiHtml5 size="25%" />
-                                <SiCss3 size="25%" />
-                                <SiChakraui size="25%" />
-                                <SiStyledcomponents size="25%" />
-                                <SiTypescript size="25%" />
-                                <SiBootstrap size="25%" />
+                                <Box p={3} >
+
+                                    <Stack m={2} direction='row' >   <BsPatchCheckFill size={'2vw'} />  <Text fontSize={'20px'} fontWeight='semibold' >  Javascript
+                                    </Text>
+                                    </Stack>
+                                    <Divider />
+                                    <Stack m={2} direction='row' >   <BsPatchCheckFill size={'2vw'} />  <Text fontSize={'20px'} fontWeight='semibold' > React
+                                    </Text>
+                                    </Stack>
+                                    <Divider />
+                                    <Stack m={2} direction='row' >   <BsPatchCheckFill size={'2vw'} />  <Text fontSize={'20px'} fontWeight='semibold' >  HTML5
+                                    </Text>
+                                    </Stack>
+                                    <Divider />
+                                    <Stack m={2} direction='row' >   <BsPatchCheckFill size={'2vw'} />  <Text fontSize={'20px'} fontWeight='semibold' >  Design Sytem
+                                    </Text>
+                                    </Stack>
+                                    <Divider />
+
+                                </Box>
+                                <Box p={3}  >
+                                    <Stack m={2} direction='row' >   <BsPatchCheckFill size={'2vw'} />  <Text fontSize={'20px'} fontWeight='semibold' >  Styled-Components
+                                    </Text>
+                                    </Stack>
+                                    <Divider />
+                                    <Stack m={2} direction='row' >   <BsPatchCheckFill size={'2vw'} />  <Text fontSize={'20px'} fontWeight='semibold' >  Typescript
+                                    </Text>
+                                    </Stack>
+                                    <Divider />
+                                    <Stack m={2} direction='row' >   <BsPatchCheckFill size={'2vw'} />  <Text fontSize={'20px'} fontWeight='semibold' >  Axios
+                                    </Text>
+                                    </Stack>
+                                    <Divider />
+                                    <Stack m={2} direction='row' >   <BsPatchCheckFill size={'2vw'} />  <Text fontSize={'20px'} fontWeight='semibold' >  CSS3
+                                    </Text>
+                                    </Stack>
+                                    <Divider />
+
+                                </Box>
                             </Flex>
+
                         </Animated>
                     </Box>
                     {/*Back-end skills  */}
@@ -71,10 +100,10 @@ export default function SkillsPage() {
                         rounded={'20px'}
                         mt={10}
                         p={2}
-                        shadow={'dark-lg'}
+                        shadow={'2xl'}
                         bg={useColorModeValue('#22222', 'gray.900')}
-                        color={useColorModeValue('blackAlpha.800', 'whiteAlpha.800')}
-                        minH='60vh'
+                        color={useColorModeValue('whiteAlpha.800')}
+                        h='50vh'
                         w={['', '40%']}>
                         <Heading
                             p={3}
@@ -86,17 +115,42 @@ export default function SkillsPage() {
 
                         <Animated animationIn="zoomIn" >
                             <Flex
-                                justifyContent={'space-evenly'}
-                                alignItems='center'
+                                flexDir={'row'}
+                                justifyContent={'space-around'}
+                                alignContent='center'
                                 gap={2}
+                                p={5}
                                 flexWrap={'wrap'} >
-                                <FaNode size="25%" />
-                                <SiExpress size='25%' />
-                                <SiTypescript size='25%' />
-                                <SiJavascript size="25%" />
-                                <SiMysql size="25%" />
-                                <FaAws size="25%" />
-                                <SiJest size='25%' />
+                                <Box p={3} >
+
+                                    <Stack m={2} direction='row' >   <BsPatchCheckFill size='2vw' />    <Text fontWeight={'semibold'} fontSize='20px'  >  Node   </Text>
+                                    </Stack>
+                                    <Divider />
+                                    <Stack m={2} direction='row' >   <BsPatchCheckFill size={'2vw'} />  <Text fontWeight={'semibold'} fontSize='20px'  >  Express  </Text>
+                                    </Stack>
+                                    <Divider />
+                                    <Stack m={2} direction='row' >   <BsPatchCheckFill size={'2vw'} />  <Text fontWeight={'semibold'} fontSize='20px'  >  Typescript </Text>
+                                    </Stack>
+                                    <Divider />
+
+                                    <Stack m={2} direction='row' >   <BsPatchCheckFill size={'2vw'} />  <Text fontWeight={'semibold'} fontSize='20px'  >  Javascript </Text>
+                                    </Stack>
+                                    <Divider />
+                                </Box>
+                                <Box p={3}  >
+                                    <Stack m={2} direction='row' >   <BsPatchCheckFill size={'2vw'} />  <Text fontWeight={'semibold'} fontSize='20px'  >  AWS  </Text>
+                                    </Stack>
+                                    <Divider />
+                                    <Stack m={2} direction='row' >   <BsPatchCheckFill size={'2vw'} />  <Text fontWeight={'semibold'} fontSize='20px'  >  Mysql  </Text>
+                                    </Stack>
+                                    <Divider />
+                                    <Stack m={2} direction='row' >   <BsPatchCheckFill size={'2vw'} />  <Text fontWeight={'semibold'} fontSize='20px'  >  Jest </Text>
+                                    </Stack>
+                                    <Divider />
+                                    <Stack m={2} direction='row' >   <BsPatchCheckFill size={'2vw'} />  <Text fontWeight={'semibold'} fontSize='20px'  >  Knex </Text>
+                                    </Stack>
+                                    <Divider />
+                                </Box>
                             </Flex>
                         </Animated>
 
@@ -106,14 +160,14 @@ export default function SkillsPage() {
                         rounded={'20px'}
                         m={3}
                         p={2}
-                        shadow={'dark-lg'}
+                        shadow={'2xl'}
                         bg={useColorModeValue('#22222', 'gray.900')}
-                        color={useColorModeValue('blackAlpha.800', 'whiteAlpha.800')}
+                        color={useColorModeValue('whiteAlpha.800')}
                         h='28vh'
                         w={['', '88%']}>
                         <Heading
                             align='center'
-                            size='3xl'                            
+                            size='3xl'
                             fontWeight={'extrabold'}
                             p={3}
                             letterSpacing='2px' > Ferramentas</Heading>
@@ -124,9 +178,7 @@ export default function SkillsPage() {
                                 alignItems='center'
                                 gap={2}
                                 flexWrap={'wrap'} >
-                                <Image   src={vscode} alt='iconVscode' />
                                 <SiGithub size={"10%"} />
-
                                 <SiPostman size="10%" />
                                 <SiNotion size="10%" />
                                 <SiVercel size="10%" />

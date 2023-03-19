@@ -14,7 +14,7 @@ export default function ColorsMode(props) {
         // w="max-content"
       
         {...props}>
-        {colorMode === 'light' ? <BsMoonStarsFill size='full'  /> : <BsSun  size='full'/>}
+        {colorMode === 'light' ? <BsMoonStarsFill size='90%'  /> : <BsSun  size='90%'/>}
       </Button>
     </Flex>
   );

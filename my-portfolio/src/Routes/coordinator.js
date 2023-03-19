@@ -8,3 +8,6 @@ export const goToHome = (navigate) =>{
 export const goToSkills = (navigate) =>{ 
     navigate('/skills')
 } 
+export const goToAbout = (navigate) =>{ 
+    navigate('/aboutme')
+} 

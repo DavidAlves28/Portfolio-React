@@ -57,10 +57,10 @@ export default function SimpleFooter() {
         align={{ base: 'center', md: 'center' }}>
         <Stack direction={'column'} spacing={6}>
           <SocialButton label={'Linkedin'} href={'https://www.linkedin.com/in/david-alves-costa-7a2b90145/'}>
-            <FaLinkedin size='full' />
+            <FaLinkedin size='90%' />
           </SocialButton>
           <SocialButton label={'github'} href={'https://github.com/DavidAlves28'}>
-            <FaGithub size='full' />
+            <FaGithub size='90%' />
           </SocialButton>
         </Stack>
         <Button

@@ -20,7 +20,7 @@ import { FiMenu } from 'react-icons/fi';
 import ColorsMode from '../ColorsMode';
 import SimpleFooter from '../Footer';
 import { useNavigate } from 'react-router-dom';
-import { goToHome, goToProjetos, goToSkills } from "../../Routes/coordinator";
+import { goToAbout, goToHome, goToProjetos, goToSkills } from "../../Routes/coordinator";
 
 import background from '../../assets/imagem/background.jpg'
 
@@ -88,13 +88,10 @@ const SidebarContent = ({ onClose, ...rest }) => {
             <NavItem onClick={() => goToHome(navigate)} fontSize='2xl' fontWeight='bold' icon={FcHome}>Home</NavItem>
             <NavItem onClick={() => goToProjetos(navigate)} fontSize='2xl' fontWeight='bold' icon={FcIdea}>Projetos</NavItem>
             <NavItem onClick={() => goToSkills(navigate)} fontSize='2xl' fontWeight='bold' icon={FcTimeline}>Skills</NavItem>
-            <NavItem fontSize='2xl' fontWeight='bold' icon={FcAbout}>Sobre</NavItem>
-
-
+            <NavItem onClick={()=> goToAbout(navigate)}  fontSize='2xl' fontWeight='bold' icon={FcAbout}>Sobre</NavItem>
             <Box
                 position={['', 'absolute']}
                 bottom='30px'>
-
                 <ColorsMode  />
                    
                 <SimpleFooter />
