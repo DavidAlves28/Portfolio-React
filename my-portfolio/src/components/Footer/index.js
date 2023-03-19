@@ -9,9 +9,8 @@ import {
   VisuallyHidden,
 } from '@chakra-ui/react';
 import { FaGithub, FaLinkedin } from 'react-icons/fa';
-import cv_david from '../../assets/cv_david.pdf'
-import { Link } from "@chakra-ui/react";
-import { FcDownload } from 'react-icons/fc';
+import cv_david from '../../assets/CV_David_ALVES_COSTA.pdf'
+
 import { FiDownload } from 'react-icons/fi';
 
 const SocialButton = ({

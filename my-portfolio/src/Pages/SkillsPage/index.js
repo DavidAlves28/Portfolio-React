@@ -35,7 +35,7 @@ export default function SkillsPage() {
                         shadow={'2xl'}
                         bg={useColorModeValue('#22222', 'gray.900')}
                         color={useColorModeValue('whiteAlpha.800')}
-                        h='50vh'
+                        minH='50vh'
                         w={['', '40%']}>
                         <Heading
                             align='center'
@@ -103,7 +103,7 @@ export default function SkillsPage() {
                         shadow={'2xl'}
                         bg={useColorModeValue('#22222', 'gray.900')}
                         color={useColorModeValue('whiteAlpha.800')}
-                        h='50vh'
+                        minH='50vh'
                         w={['', '40%']}>
                         <Heading
                             p={3}
