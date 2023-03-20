@@ -49,10 +49,10 @@ export default function SimpleFooter() {
         as={Stack}
         w='100%'
         py={2}
-        h='25vh'
+        h={['','25vh']}
         direction={{ base: 'column', md: 'column' }}
         spacing={4}
-        justify={{ base: 'center', md: 'space-around' }}
+        justify={{ base: 'end', md: 'space-around' }}
         align={{ base: 'center', md: 'center' }}>
         <Stack direction={'column'} spacing={6}>
           <SocialButton label={'Linkedin'} href={'https://www.linkedin.com/in/david-alves-costa-7a2b90145/'}>

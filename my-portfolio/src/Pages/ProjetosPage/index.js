@@ -6,6 +6,7 @@ import ecommerce from '../../assets/imagem/ecommerceLabenu.png'
 import backgroundP from '../../assets/imagem/background.jpg'
 import blackjack from '../../assets/imagem/Desktop-blackjack.png'
 import calculadora from '../../assets/imagem/calculadora.png'
+import housaStore from '../../assets/imagem/houseStore.png'
 import emBreve from '../../assets/imagem/Blue Minimalist Linktree Background.jpg'
 import { Animated } from "react-animated-css";
 import { FaNode } from "react-icons/fa";
@@ -19,14 +20,14 @@ export default function ProjectsGrid() {
       <SideBarMenu />
       {/*////////// projeto1 /////////////////////////////////////// */}
       <Box
-        w={['100vw', '75vw']}
+        w={['100vw', '80vw']}
         m='0 auto'>
         <Flex
           shadow={'2xl'}
           bg='#fffff'
           flexDir={['column', 'row']}
           w='80%'
-          ml={['', '5vw', '320px']}
+          ml={['', '', '320px']}
           minH={'100vh'}
           justifyContent={['center', 'space-evenly']}
           alignItems={['self-start', 'Center']}
@@ -57,7 +58,7 @@ export default function ProjectsGrid() {
                 mb={6}
                 pos={'relative'}>
                 <Image
-                  src={blackjack}
+                  src={housaStore}
                 />
               </Box>
               <Stack>

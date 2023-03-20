@@ -11,8 +11,7 @@ import {
     DrawerContent,
     Text,
     useDisclosure,
-    Center,
-    Button,
+   
 } from '@chakra-ui/react';
 
 import { FcTimeline, FcIdea, FcHome, FcAbout } from "react-icons/fc";
@@ -22,15 +21,13 @@ import SimpleFooter from '../Footer';
 import { useNavigate } from 'react-router-dom';
 import { goToAbout, goToHome, goToProjetos, goToSkills } from "../../Routes/coordinator";
 
-import background from '../../assets/imagem/background.jpg'
 
 export default function SideBarMenu({ children }) {
 
     const { isOpen, onOpen, onClose } = useDisclosure();
     return (
         <Box bg={useColorModeValue('gray.100', 'gray.900')}>
-            <SidebarContent
-                // w='14vw'
+            <SidebarContent             
                 onClose={() => onClose}
                 display={{ base: 'none', md: 'block' }}
             />
@@ -51,7 +48,6 @@ export default function SideBarMenu({ children }) {
             <MobileNav display={{ base: 'flex', md: 'none' }} onOpen={onOpen} />
             <Box ml={{ base: 0, md: 60 }} >
                 {children}
-
             </Box>
         </Box>
 
@@ -68,7 +64,7 @@ const SidebarContent = ({ onClose, ...rest }) => {
             borderRightColor={useColorModeValue('blackAlpha.300', 'blackAlpha.900')}
             w={{ base: 'full', md: 60 }}
             pos="fixed"
-            h="100vh"
+            minH="100vh"
             {...rest}>
             <Flex
                 flexDir={'column'}
