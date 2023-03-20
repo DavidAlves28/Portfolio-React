@@ -47,10 +47,10 @@ export default function ProjectsGrid() {
               rounded={'md'}
               p={6}
               m={[5, 2]}
-              h={['', '48vh']}
+              minH={['', '48vh']}
               overflow={'hidden'}>
               <Box
-                h={'210px'}
+                h={'230px'}
                 bg={'gray.100'}
                 mt={-6}
                 mx={-6}
@@ -134,10 +134,10 @@ export default function ProjectsGrid() {
               rounded={'md'}
               p={6}
               m={[5, 2]}
-              h={['', '48vh']}
+              minH={['', '48vh']}
               overflow={'hidden'}>
               <Box
-                h={'210px'}
+                 h={'230px'}
                 bg={'gray.100'}
                 mt={-6}
                 mx={-6}
@@ -224,10 +224,10 @@ export default function ProjectsGrid() {
               rounded={'md'}
               p={6}
               m={[5, 2]}
-              h={['', '48vh']}
+              minH={['', '48vh']}
               overflow={'hidden'}>
               <Box
-                h={'210px'}
+                 h={'230px'}
                 bg={'gray.100'}
                 mt={-6}
                 mx={-6}
@@ -311,17 +311,16 @@ export default function ProjectsGrid() {
               rounded={'md'}
               p={6}
               m={[5, 2]}
-              h={['', '48vh']}
+              minH={['', '48vh']}
               overflow={'hidden'}>
               <Box
-                h={'210px'}
+                 h={'230px'}
                 bg={'gray.100'}
                 mt={-6}
                 mx={-6}
                 mb={6}
                 pos={'relative'}>
                 <Image
-                
                   src={calculadora}
                 />
               </Box>
@@ -342,8 +341,6 @@ export default function ProjectsGrid() {
                   <SiVercel />
 
                 </Flex>
-
-
                 <Heading
                   color={useColorModeValue('gray.700', 'white')}
                   fontSize={'2xl'}
@@ -382,7 +379,7 @@ export default function ProjectsGrid() {
               </Stack>
             </Flex>
           </Animated>
-          {/*////////// projeto4 /////////////////////////////////////// */}
+          {/*////////// projeto5 /////////////////////////////////////// */}
           <Animated
             animationIn='zoomIn'
             animationInDuration={3000}
@@ -398,10 +395,10 @@ export default function ProjectsGrid() {
               rounded={'md'}
               p={6}
               m={[5, 2]}
-              h={['', '48vh']}
+              minH={['', '48vh']}
               overflow={'hidden'}>
               <Box
-                h={'210px'}
+                 h={'230px'}
                 bg={'gray.100'}
                 mt={-6}
                 mx={-6}
@@ -468,7 +465,7 @@ export default function ProjectsGrid() {
               </Stack>
             </Flex>
           </Animated>
-          {/*////////// projeto5 /////////////////////////////////////// */}
+          {/*////////// projeto6 /////////////////////////////////////// */}
           <Animated
             animationIn='zoomIn'
             animationInDuration={3500}
@@ -485,10 +482,10 @@ export default function ProjectsGrid() {
               rounded={'md'}
               p={6}
               m={[5, 2]}
-              h={['', '48vh']}
+              minH={['', '48vh']}
               overflow={'hidden'}>
               <Box
-                h={'210px'}
+                 h={'230px'}
                 bg={'gray.100'}
                 mt={-6}
                 mx={-6}
