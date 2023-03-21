@@ -9,7 +9,7 @@ import {
   VisuallyHidden,
 } from '@chakra-ui/react';
 import { FaGithub, FaLinkedin } from 'react-icons/fa';
-import cv_david from '../../assets/CV_David_ALVES_COSTA.pdf'
+import cv_david from '../../assets/CV_ DAVID_ ALVES_ COSTA.pdf'
 
 import { FiDownload } from 'react-icons/fi';
 
