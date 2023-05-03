@@ -63,7 +63,7 @@ export default function SimpleFooter() {
           </SocialButton>
         </Stack>
         <Text fontSize={"lg"} fontWeight="bold">
-          © 2023 David Alves Costa
+          2023 David Alves Costa
         </Text>
       </Flex>
     </Box>
