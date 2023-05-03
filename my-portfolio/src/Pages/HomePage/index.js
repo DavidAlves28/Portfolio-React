@@ -1,12 +1,12 @@
-import { Box} from "@chakra-ui/react";
+import { Box } from "@chakra-ui/react";
 import NavMenu from "../../components/NavMenu";
 import SimpleFooter from "../../components/Footer";
 import Profile from "../../components/Profile/profile";
 import Skills from "../../components/Skills/skills";
 import TimeLineProjects from "../../components/TimeLimeProjects/timeLineProjects";
 import Sobre from "../../components/Sobre/sobre";
-import Zoom from "react-reveal/Zoom";
-import Slide from "react-reveal/Slide";
+
+
 export default function HomePage() {
   return (
     <Box
@@ -16,15 +16,12 @@ export default function HomePage() {
         #0E4AFD 68%)"
     >
       <NavMenu />
-      <Slide right >
-        <Profile />
-      </Slide>
-      
-      <Skills  />
-      <TimeLineProjects   />
-      <Zoom>
-        <Sobre   />
-      </Zoom>
+
+      <Profile />
+     
+      <Skills />
+      <TimeLineProjects />
+      <Sobre />
       <SimpleFooter />
     </Box>
   );

@@ -1,7 +1,6 @@
 import { Box, Flex, Stack, Text } from "@chakra-ui/react";
 
 import { BsPatchCheckFill } from "react-icons/bs";
-import Fade from "react-reveal/Fade";
 
 export default function Skills() {
   const front = [
@@ -37,7 +36,7 @@ export default function Skills() {
     "Justinmind",
   ];
   return (
-    <Fade up>
+    <>
       <Stack
         id="Habilidades"
         justify={"center"}
@@ -60,11 +59,11 @@ export default function Skills() {
         roundedTopLeft={"16px"}
         shadow={"dark-lg"}
         minH="40vh"
-        flexDir={["column", "column","row"]}
+        flexDir={["column", "column", "row"]}
       >
         <Flex
-          flexDir={["column", "column","row"]}
-          flexWrap={'wrap'}
+          flexDir={["column", "column", "row"]}
+          flexWrap={"wrap"}
           gap={3}
           minH={["80vw", "15vh"]}
           w="100%"
@@ -178,6 +177,6 @@ export default function Skills() {
           </Box>
         </Flex>
       </Flex>
-    </Fade>
+    </>
   );
 }

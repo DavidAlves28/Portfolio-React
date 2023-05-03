@@ -36,7 +36,7 @@ import blackjack from "../../assets/imagem/Desktop-blackjack.png";
 import calculadora from "../../assets/imagem/calculadora.png";
 import houseStore from "../../assets/imagem/houseStore.png";
 import emBreve from "../../assets/imagem/Blue Minimalist Linktree Background.jpg";
-import Slide from "react-reveal/Slide";
+
 const projects = [
   {
     id: 1,
@@ -137,7 +137,7 @@ const TimeLineProjects = () => {
 
 const Card = ({ title, link, image, description, icon, date }) => {
   return (
-    <Slide right>
+    <>
       <HStack
         p={{ base: 3, sm: 6 }}
         w={{ base:'100%', sm: '110%' }}
@@ -202,7 +202,7 @@ const Card = ({ title, link, image, description, icon, date }) => {
           </Stack>
         </Flex>
       </HStack>
-    </Slide>
+    </>
   );
 };
 // linha vertical com ponto
