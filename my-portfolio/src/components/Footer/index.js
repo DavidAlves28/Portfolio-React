@@ -41,6 +41,7 @@ export default function SimpleFooter() {
         letterSpacing={2}
         w="100%"
         py={2}
+        color='#fff'
         shadow={"dark-lg"}
         h={["", "7vh"]}
         direction={"row"}

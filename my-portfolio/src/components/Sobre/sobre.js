@@ -1,24 +1,25 @@
-import { Box,Image, Stack, Text } from "@chakra-ui/react";
+import { Box, Image, Stack, Text } from "@chakra-ui/react";
 import Perfil from "../../assets/imagem/fotoPerfil2.png";
 
 export default function Sobre() {
   return (
+    <Box
+      id="Sobre"
+      fontFamily={"heading"}
+      p={10}
+      m="0 auto"
+      w={["100vw", "", "60vw"]}
+    >
   
-    <Box  id='Sobre'  fontFamily={'heading'}  p={10} m='0 auto' w={["100vw", "", "60vw"]}>
       <Stack
         direction={["column", "row"]}
         align="center"
         justify={"space-between"}
-        m={"0"}
+    
         p={"2%"}
         mb={"20px"}
       >
-        <Text
-          fontSize={"35"}
-        
-         
-          as={"b"}
-        >
+        <Text fontSize={"35"} color="#B4F2FF" as={"b"}>
           DAVID ALVES COSTA
         </Text>
         <Image
@@ -33,7 +34,7 @@ export default function Sobre() {
           src={Perfil}
         />
       </Stack>
-      <Box bg="#1939B7" shadow={"dar"} rounded={"md"} p={2}>
+      <Box bg="#1939B7" shadow={"dark-lg"}  rounded={"md"} p={10}>
         <Text
           color="#B4F2FF"
           fontWeight={"bold"}
