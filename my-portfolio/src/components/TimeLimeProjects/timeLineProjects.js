@@ -121,7 +121,13 @@ const TimeLineProjects = () => {
       p={{ base: 2, sm: 10 }}
     >
       <Stack justify={"center"} align={"center"} p="12px">
-        <Text bgColor="#44BDFF" bgClip="text" ml="10px" fontSize="4xl">
+        <Text
+          bgColor="#44BDFF"
+          fontWeight="bold"
+          bgClip="text"
+          ml="10px"
+          fontSize="4xl"
+        >
           Projetos
         </Text>
       </Stack>
@@ -140,9 +146,9 @@ const Card = ({ title, link, image, description, icon, date }) => {
     <>
       <HStack
         p={{ base: 3, sm: 6 }}
-        w={{ base:'100%', sm: '110%' }}
+        w={{ base: "100%", sm: "110%" }}
         ml="-10px"
-        mb='10px'
+        mb="10px"
         bg="#102693"
         shadow="dark-lg"
         spacing={5}
@@ -184,7 +190,7 @@ const Card = ({ title, link, image, description, icon, date }) => {
             </Link>
             <Text
               lineHeight={1.7}
-              color='#ffff'
+              color="#ffff"
               fontSize="md"
               w="90%"
               letterSpacing={1}

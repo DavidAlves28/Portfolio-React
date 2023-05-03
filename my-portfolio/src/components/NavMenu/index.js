@@ -54,7 +54,7 @@ export default function NavMenu() {
                     w="100%"
                     _hover={{
                       backgroundPosition: "100%",
-                      backgroundColor: "#2F2FA5",
+                      backgroundColor: "#091A7A",
                       color: "#38C0FF",
                     }}
                     letterSpacing={2}
@@ -81,7 +81,7 @@ export default function NavMenu() {
               <Button
                 w="min-content"
                 _hover={{
-                  backgroundColor: "#2F2FA5",
+                  backgroundColor: "#091A7A",
                   backgroundPosition: "100%",
                   color: "#38C0FF",
                 }}
