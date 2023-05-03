@@ -36,7 +36,7 @@ export default function Sobre() {
       <Box bg="#1939B7" shadow={"dar"} rounded={"md"} p={2}>
         <Text
           color="#B4F2FF"
-          fontWeight={"thin"}
+          fontWeight={"bold"}
           fontSize={"17"}
           mb={7}
           textAlign={"justify"}
