@@ -44,7 +44,13 @@ export default function Skills() {
         mt="40px"
         p="12px"
       >
-        <Text bgColor="#44BDFF" bgClip="text" ml="10px" fontSize="4xl">
+        <Text
+          bgColor="#44BDFF"
+          fontWeight="bold"
+          bgClip="text"
+          ml="10px"
+          fontSize="4xl"
+        >
           Habilidades
         </Text>
       </Stack>
@@ -71,7 +77,13 @@ export default function Skills() {
           alignItems={["center", "self-start"]}
         >
           <Box>
-            <Text bgColor="#44BDFF" bgClip="text" ml="10px" fontSize="4xl">
+            <Text
+              bgColor="#44BDFF"
+              fontWeight="bold"
+              bgClip="text"
+              ml="10px"
+              fontSize="4xl"
+            >
               Front-end
             </Text>
             {front.map((skill, index) => {
@@ -79,11 +91,15 @@ export default function Skills() {
                 <Stack
                   key={index}
                   bg="#2222"
-                  borderRight={"2px solid"}
+                  borderRight={"2px solid #fff"}
                   rounded={"base"}
                   direction={"row"}
                   w="270px"
                   m={1}
+                  _hover={{
+                    ml: "-2px",
+                    cursor: "pointer",
+                  }}
                 >
                   <BsPatchCheckFill
                     align="center"
@@ -97,7 +113,7 @@ export default function Skills() {
                     letterSpacing={"3px"}
                     fontSize={"18px"}
                     textAlign={"left"}
-                    fontWeight="semibold"
+                    fontWeight="bold"
                   >
                     {skill}
                   </Text>
@@ -106,7 +122,13 @@ export default function Skills() {
             })}
           </Box>
           <Box>
-            <Text bgColor="#44BDFF" bgClip="text" ml="10px" fontSize="4xl">
+            <Text
+              bgColor="#44BDFF"
+              fontWeight="bold"
+              bgClip="text"
+              ml="10px"
+              fontSize="4xl"
+            >
               Back-end
             </Text>
             {back.map((skill, index) => {
@@ -114,11 +136,15 @@ export default function Skills() {
                 <Stack
                   key={index}
                   bg="#2222"
-                  borderRight={"2px solid"}
+                  borderRight={"2px solid #fff"}
                   rounded={"base"}
                   direction={"row"}
                   w="270px"
                   m={1}
+                  _hover={{
+                    ml: "-2px",
+                    cursor: "pointer",
+                  }}
                 >
                   <BsPatchCheckFill
                     align="center"
@@ -132,7 +158,7 @@ export default function Skills() {
                     letterSpacing={"3px"}
                     fontSize={"18px"}
                     textAlign={"left"}
-                    fontWeight="semibold"
+                    fontWeight="bold"
                   >
                     {skill}
                   </Text>
@@ -141,7 +167,13 @@ export default function Skills() {
             })}
           </Box>
           <Box>
-            <Text bgColor="#44BDFF" bgClip="text" ml="10px" fontSize="4xl">
+            <Text
+              bgColor="#44BDFF"
+              fontWeight="bold"
+              bgClip="text"
+              ml="10px"
+              fontSize="4xl"
+            >
               Ferramentas
             </Text>
             {ferramentas.map((skill, index) => {
@@ -149,11 +181,15 @@ export default function Skills() {
                 <Stack
                   key={index}
                   bg="#2222"
-                  borderRight={"2px solid"}
+                  borderRight={"2px solid #fff"}
                   rounded={"base"}
                   direction={"row"}
                   w="270px"
                   m={1}
+                  _hover={{
+                    ml: "-2px",
+                    cursor: "pointer",
+                  }}
                 >
                   <BsPatchCheckFill
                     align="center"
@@ -167,7 +203,7 @@ export default function Skills() {
                     letterSpacing={"3px"}
                     fontSize={"18px"}
                     textAlign={"left"}
-                    fontWeight="semibold"
+                    fontWeight="bold"
                   >
                     {skill}
                   </Text>

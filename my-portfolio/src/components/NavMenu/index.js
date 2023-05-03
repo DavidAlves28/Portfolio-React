@@ -54,10 +54,10 @@ export default function NavMenu() {
                     w="100%"
                     _hover={{
                       backgroundPosition: "100%",
-                      color: "##9494F0",
+                      backgroundColor: "#2F2FA5",
+                      color: "#38C0FF",
                     }}
                     letterSpacing={2}
-
                     fontWeight="bold"
                     h="10"
                     color="#fff"
@@ -76,13 +76,14 @@ export default function NavMenu() {
               ))}
             </HStack>
           </HStack>
-          <Flex  alignItems={"center"} gap={5}>
+          <Flex alignItems={"center"} gap={5}>
             <Menu>
               <Button
-              w='min-content'
+                w="min-content"
                 _hover={{
+                  backgroundColor: "#2F2FA5",
                   backgroundPosition: "100%",
-                  color: "##9494F0",
+                  color: "#38C0FF",
                 }}
                 fontWeight="bold"
                 as="a"
@@ -115,7 +116,7 @@ export default function NavMenu() {
         </Flex>
 
         {isOpen ? (
-        <Box pb={5} mt="10px" display={{ md: "none" }}>
+          <Box pb={5} mt="10px" display={{ md: "none" }}>
             <Stack as={"nav"} spacing={2}>
               {Links.map((link) => (
                 <AnchorLink key={link} href={`#${link}`}>

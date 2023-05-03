@@ -4,8 +4,8 @@ import HomePage from './Pages/HomePage'
 
 function App() {
   return (
-    <ChakraProvider >    
-    <HomePage/>    
+    <ChakraProvider fontFamily='Russo One , sans-serif  '>    
+    <HomePage />    
     </ChakraProvider>
   )
 }

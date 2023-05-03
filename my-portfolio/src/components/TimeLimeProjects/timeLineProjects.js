@@ -184,7 +184,8 @@ const Card = ({ title, link, image, description, icon, date }) => {
             </Link>
             <Text
               lineHeight={1.7}
-              fontSize="sm"
+              color='#ffff'
+              fontSize="md"
               w="90%"
               letterSpacing={1}
               textAlign={"justify"}
@@ -214,7 +215,7 @@ const LineWithDot = () => {
         left="50%"
         height="calc(100% + 10px)"
         border="2px solid"
-        borderColor={useColorModeValue("gray.200", "blackAlpha.900")}
+        borderColor="#222"
         top="0px"
       ></chakra.span>
       <Box pos="relative" p="10px">
