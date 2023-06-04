@@ -52,7 +52,7 @@ export default function SimpleFooter() {
         <Stack direction={"row"} spacing={6}>
           <SocialButton
             label={"Linkedin"}
-            href={"https://www.linkedin.com/in/david-alves-costa-7a2b90145/"}
+            href={"https://www.linkedin.com/in/david-dev/full/"}
           >
             <FaLinkedin size="90%" />
           </SocialButton>
