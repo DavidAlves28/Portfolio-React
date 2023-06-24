@@ -7,6 +7,7 @@ import TimeLineProjects from "../../components/TimeLimeProjects/timeLineProjects
 import { AnimatePresence } from "framer-motion";
 
 export default function HomePage() {
+
   return (
     <Box
       bgImage="linear-gradient(45deg,     

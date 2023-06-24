@@ -53,6 +53,7 @@ export default function NavMenu() {
             >
               {Links.map((link) => (
                 <Link
+                key={link}
                   to={`/${link}`}
                  
                   // onClick={()=>goTo}

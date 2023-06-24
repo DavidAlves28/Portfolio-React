@@ -1,27 +1,29 @@
-import React from "react";
+import React, { useState } from "react";
 import {
   Link,
-  Text,
-  HStack,
-  Flex,
-  Icon,
-  Stack,
+  Text,    
   Image,
   Grid,
-  VStack,
-  Button,
-  Box,
+  VStack, 
+
   Select,
+  Stack,
+  Flex,
 } from "@chakra-ui/react";
-import { projetos } from "../../data/projetos";
 import { motion } from "framer-motion";
+import { projetos } from "../../data/projetos";
 
 // icons para tecnologias utilizadas
 
 // Card do projeto
 const TimeLineProjects = () => {
   const MotionFlex = motion(Flex);
-
+ 
+  const [stack, setStack] = useState("")
+  const handleStack =(e)=>{
+  setStack(e.target.value);
+  }
+ 
   return (
     <>
       <VStack
@@ -32,11 +34,11 @@ const TimeLineProjects = () => {
         <h1>Projetos</h1>
       </VStack>
       <Stack justify={"center"} align="center">
-        <Select p="3" textAlign={"center"} gap="10px" w={"300px"}>
-          <option value={"todos"}>Ver Projetos</option>
-          <option value={"back"}>Back-end</option>
-          <option value={"front"}>Front-end</option>
-          <option value={"full"}>Full-stack</option>
+        <Select onChange={handleStack}   p="3" textAlign={"center"} gap="10px" w={"300px"}>         
+          <option value={""}>Todos </option>
+          <option value={"Back-End"}>Back-end</option>
+          <option value={"Front-End"}>Front-end</option>
+          <option value={"Full-Stack"}>Full-stack</option>
         </Select>
       </Stack>
       <MotionFlex
@@ -56,7 +58,11 @@ const TimeLineProjects = () => {
           m="0 auto"
           p={{ base: 2, sm: 10 }}
         >
-          {projetos.map((project, index) => (
+          {projetos.filter((project)=>{
+          return project === "" ? project :  project.category.includes(stack)
+          
+          })                  
+          .map((project, index) => (
             <Flex key={index} mb="10px">
               <Card {...project} />
             </Flex>
@@ -89,13 +95,9 @@ const Card = ({ title, link, image, description, icon, date }) => {
           <Text fontSize="sm">{date}</Text>
         </Link>
         <Stack w={{ base: "100%", sm: "100%", md: "100%", lg: "80%" }}>
-          <HStack>
-            {icon.map((ico) => (
-              <Icon key={ico} as={ico} w={8} h={10} color="#6690FF" />
-            ))}
-          </HStack>
+        
           <Stack justify={"left"}>
-            <Image rounded={"10px"} alt="imagemDoProjeto" src={image} />
+            <Image rounded={"10px"} sizes="90%" alt="imagemDoProjeto" src={image} />
           </Stack>
         </Stack>
       </Flex>
