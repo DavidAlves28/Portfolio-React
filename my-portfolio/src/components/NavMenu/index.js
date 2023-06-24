@@ -15,10 +15,13 @@ import perfil from "../../assets/imagem/fotoPerfil2.png";
 import cv_david from "../../assets/CV_ DAVID_ ALVES_ COSTA.pdf";
 import { FiDownload } from "react-icons/fi";
 import AnchorLink from "react-anchor-link-smooth-scroll";
-const Links = ["Habilidades", "Projetos", "Sobre"];
+import { Link, useNavigate } from "react-router-dom";
+
+const Links = ["Projetos", "Sobre"];
 
 export default function NavMenu() {
   const { isOpen, onOpen, onClose } = useDisclosure();
+  const navigate = useNavigate();
 
   return (
     <>
@@ -49,33 +52,34 @@ export default function NavMenu() {
               justify="center"
             >
               {Links.map((link) => (
-                <AnchorLink key={link} href={`#${link}`}>
-                  <Button
-                    w="100%"
-                    _hover={{
-                      backgroundPosition: "100%",
-                      backgroundColor: "#091A7A",
-                      color: "#38C0FF",
-                    }}
-                    letterSpacing={2}
-                    fontWeight="bold"
-                    h="10"
-                    color="#fff"
-                    border=" 3px solid #2F2FA5"
-                    backgroundImage="linear-gradient(45deg, #2F2FA5 50%, transparent 50%)"
-                    backgroundSize={{ base: "80em", sm: "80em", md: "500px" }}
-                    backgroundRepeat="no-repeat"
-                    backgroundPosition="0%"
-                    transition="background 500ms ease-in-out"
-                    rounded="lg"
-                    fontSize="2xl"
-                  >
-                    {link}
-                  </Button>
-                </AnchorLink>
+                <Link
+                  to={`/${link}`}
+                 
+                  // onClick={()=>goTo}
+                >
+                  <Button  w="100%"
+                  _hover={{
+                    backgroundPosition: "100%",
+                    backgroundColor: "#091A7A",
+                    color: "#38C0FF",
+                  }}
+                  letterSpacing={2}
+                  fontWeight="bold"
+                  h="10"
+                  color="#fff"
+                  border=" 3px solid #2F2FA5"
+                  backgroundImage="linear-gradient(45deg, #2F2FA5 50%, transparent 50%)"
+                  backgroundSize={{ base: "80em", sm: "80em", md: "500px" }}
+                  backgroundRepeat="no-repeat"
+                  backgroundPosition="0%"
+                  transition="background 500ms ease-in-out"
+                  rounded="lg"
+                  fontSize="2xl">{link}</Button>
+                </Link>
               ))}
             </HStack>
           </HStack>
+
           <Flex alignItems={"center"} gap={5}>
             <Menu>
               <Button

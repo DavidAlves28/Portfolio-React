@@ -1,7 +1,7 @@
 import { Box, Image, Stack, Text } from "@chakra-ui/react";
 import Perfil from "../../assets/imagem/fotoPerfil2.png";
 
-export default function Sobre() {
+export default function SobreMim() {
   return (
     <Box
       id="Sobre"

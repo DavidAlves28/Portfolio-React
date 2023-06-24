@@ -36,12 +36,14 @@ const SocialButton = ({ children, label, href }) => {
 
 export default function SimpleFooter() {
   return (
-    <Box w="100%">
+    <Box w="100%" pos={"sticky"} bottom={"0px"}>
       <Flex
         letterSpacing={2}
         w="100%"
+        opacity={'0.9'}
+        bg={'blue.600'}
         py={2}
-        color='#fff'
+        color="#fff"
         shadow={"dark-lg"}
         h={["", "7vh"]}
         direction={"row"}

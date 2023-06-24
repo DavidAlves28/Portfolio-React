@@ -1,43 +1,50 @@
 import React from "react";
-import { Flex, Image, Stack } from "@chakra-ui/react";
+import { Box, Flex, GridItem, Image, Stack } from "@chakra-ui/react";
 import Type from "../typeWriter/index.";
-import bg from "../../assets/imagem/sapiens.svg";
+import devDark from "../../assets/imagem/developer-dark.svg";
+import { motion } from "framer-motion";
 
 export default function Profile() {
-  return (
-    <Stack
-      justify={"center"}
-      align={["end", ""]}
-      h={["", "90vh"]}
-      w={["100%", "100%", "80%"]}
-      m="0 auto"
-    >
-      <Flex
-        mt="10px"
-        m="0 auto "
-        h={["85vh", "90vh"]}
-        w={{ base: "100%", sm: "80%", md: "20em", lg: "80%" }}
-        rounded="16px"
-        fontSize={"30px"}
-        flexDir={["column", "column", "row"]}
-        justifyContent={["center", "center"]}
-        alignItems={["flex-start", "center"]}
-      >
-        <Stack w="100%">
-          <Image alt="imagem_perfil" src={bg} />
-        </Stack>
+  const MotionFlex = motion(Flex);
 
-        <Stack
-          bgGradient="linear(to-r,#D6E4FF, #44BDFF)"
-          bgClip="text"
-          fontSize={["3xl", "2xl", "2xl", "5xl"]}
-          fontWeight="semibold"
-          w="100%"
-          m={["10px", "40px"]}
+  return (
+    <>
+      <MotionFlex
+        py={3}
+        px={3}
+        borderRadius="md"
+        w="full"
+        borderLeft="2px"
+        borderColor="teal.500"
+        initial={{ opacity: 0, scale: 0 }}
+        animate={{ opacity: 1, scale: 1 }}
+        exit={{ opacity: 0, scale: 0 }}
+        transitionDuration={'1.2s'}       
+ 
+      >
+        <Flex
+          w={["90vw", "80vw", "80vw"]}
+          h="90vh"
+          m="0 auto"
+          flexDir={["column", "row"]}
+          justifyContent={"center"}
+          alignItems={"center"}
         >
-          <Type />
-        </Stack>
-      </Flex>
-    </Stack>
+          <Stack w={{ base: "70%", md: "100%" }} m={["0 auto", ""]}>
+            <Image alt="imagem_perfil" src={devDark} />
+          </Stack>
+          <GridItem
+            bgGradient="linear(to-r,#D6E4FF, #44BDFF)"
+            bgClip="text"
+            fontSize={["3xl", "2xl", "2xl", "5xl"]}
+            fontWeight="semibold"
+            w="100%"
+            m={["10px", "40px"]}
+          >
+            <Type />
+          </GridItem>
+        </Flex>
+      </MotionFlex>
+    </>
   );
 }
