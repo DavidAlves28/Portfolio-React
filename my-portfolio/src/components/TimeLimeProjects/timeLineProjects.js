@@ -23,7 +23,13 @@ const TimeLineProjects = () => {
   const handleStack =(e)=>{
   setStack(e.target.value);
   }
- 
+   const returnArrayReverse = (array) => {
+    let arrayInvertido = [];
+    for (let i = array.length - 1; i >= 0; i--) {
+      arrayInvertido.push(array[i]);
+    }
+    return arrayInvertido;
+  };
   return (
     <>
       <VStack
@@ -58,7 +64,7 @@ const TimeLineProjects = () => {
           m="0 auto"
           p={{ base: 2, sm: 10 }}
         >
-          {projetos.filter((project)=>{
+          {returnArrayReverse(projetos).filter((project)=>{
           return project === "" ? project :  project.category.includes(stack)
           
           })                  

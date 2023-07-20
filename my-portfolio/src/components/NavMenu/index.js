@@ -12,16 +12,15 @@ import {
 } from "@chakra-ui/react";
 import { HamburgerIcon, CloseIcon } from "@chakra-ui/icons";
 import perfil from "../../assets/imagem/fotoPerfil2.png";
-import cv_david from "../../assets/CV_ DAVID_ ALVES_ COSTA.pdf";
+import cv_david from "../../assets/DAVID ALVES COSTA_full_stack.pdf";
 import { FiDownload } from "react-icons/fi";
 import AnchorLink from "react-anchor-link-smooth-scroll";
-import { Link, useNavigate } from "react-router-dom";
+import { Link,  } from "react-router-dom";
 
 const Links = ["Projetos", "Sobre"];
 
 export default function NavMenu() {
   const { isOpen, onOpen, onClose } = useDisclosure();
-  const navigate = useNavigate();
 
   return (
     <>

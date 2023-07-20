@@ -6,7 +6,7 @@ export default function Router() {
     <BrowserRouter>
       <Routes>
         <Route index element={<HomePage />} />
-        <Route path="*" element={<HomePage />} />
+        <Route path="/projetos" element={<HomePage />} />
         <Route path="/sobre" element={<Sobre />} />
       </Routes>
     </BrowserRouter>
