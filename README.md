@@ -1,4 +1,4 @@
-![portfolioMobile](https://github.com/DavidAlves28/Portfolio-React/assets/107942209/26d06dde-48e3-4646-87b2-1783f7267030)![portfolio](https://github.com/DavidAlves28/Portfolio-React/assets/107942209/6f958f79-6acf-4a2d-96be-2b51ac6840c6)# Portfólio- David Alve Costa 
+# Portfólio- David Alve Costa 
 ## Olá, Que bom ver voçê por aqui!
  Este Projeto foi criado com muito carrinho, com propósito de mostrar um pouco de mim pessoalmente e profissionalmente.
  Tentei construir algo simples e agradável , que pudesse me descrever bem. Enfim espera que possa acompanhar meu desenvolvimente por ele
