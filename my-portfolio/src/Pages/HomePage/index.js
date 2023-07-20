@@ -1,12 +1,13 @@
-import { Box} from "@chakra-ui/react";
+import { Box } from "@chakra-ui/react";
 import NavMenu from "../../components/NavMenu";
 import SimpleFooter from "../../components/Footer";
 import Profile from "../../components/Profile/profile";
-import Skills from "../../components/Skills/skills";
+
 import TimeLineProjects from "../../components/TimeLimeProjects/timeLineProjects";
-import Sobre from "../../components/Sobre/sobre";
+import { AnimatePresence } from "framer-motion";
 
 export default function HomePage() {
+
   return (
     <Box
       bgImage="linear-gradient(45deg,     
@@ -17,11 +18,14 @@ export default function HomePage() {
       fontStyle={"sans-serif"}
     >
       <NavMenu />
-      <Profile />
-      <Skills />
-      <TimeLineProjects   />
-      <Sobre />
-      <SimpleFooter />
+      <AnimatePresence>
+        <Profile />
+      </AnimatePresence>
+      <AnimatePresence>
+
+        <TimeLineProjects />
+      </AnimatePresence>
+        <SimpleFooter />
     </Box>
   );
 }

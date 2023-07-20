@@ -24,16 +24,18 @@ export default function Skills() {
     "Mysql",
     "SQL",
     "AWS",
-    "Firebase",
     "Jest",
+    "Mock tests",
   ];
   const ferramentas = [
     "GitHub",
+    "Render",
     "Git",
     "Postman",
     "Vercel",
     "Figma",
     "Justinmind",
+    "Maquinas Virtuais (Linux)",
   ];
   return (
     <>
