@@ -1,4 +1,4 @@
-# Portfólio- David Alve Costa 
+![portfolioMobile](https://github.com/DavidAlves28/Portfolio-React/assets/107942209/26d06dde-48e3-4646-87b2-1783f7267030)![portfolio](https://github.com/DavidAlves28/Portfolio-React/assets/107942209/6f958f79-6acf-4a2d-96be-2b51ac6840c6)# Portfólio- David Alve Costa 
 ## Olá, Que bom ver voçê por aqui!
  Este Projeto foi criado com muito carrinho, com propósito de mostrar um pouco de mim pessoalmente e profissionalmente.
  Tentei construir algo simples e agradável , que pudesse me descrever bem. Enfim espera que possa acompanhar meu desenvolvimente por ele
@@ -16,15 +16,6 @@
 # O Projeto   
 ### Deploy : https://portfolio-react-six-opal.vercel.app/
 
-### Instalação:
-#### Instalar pacotes e dependências 
-``` 
-npm install
-```
-#### Iniciar App
-``` 
-npm run start
-```
 
 ###  Tecnlogias utilizadas : 
 ![Javascript](https://img.shields.io/badge/JavaScript-323330?style=for-the-badge&logo=javascript&logoColor=F7DF1E)
@@ -35,24 +26,23 @@ npm run start
  - ```Chakra UI```;
  - ```React-anchor-link-smooth-scroll```;
  - ```React-icons```;
- - ```Components```
+ - ```Components```;
+ - ```React-router-dom```
  
  
 
 #
 <a id="pages"></a>
 ## Páginas do Projeto 
+![portfolio](https://github.com/DavidAlves28/Portfolio-React/assets/107942209/23b0c3f0-34be-4592-af82-e93cb9ecf922)
+![portfolioMobile](https://github.com/DavidAlves28/Portfolio-React/assets/107942209/0953aff3-a059-4cef-b2e1-993f67b8b712)
 
-### Página Home 
-#### Componentes 
- - Habilidades
+### Páginas
  - Projetos 
  - Sobre
 
-![home](/my-portfolio/src/assets/imagem/portfoliodesktop.png) 
 
-### Páginas  Mobile
-![home](/my-portfolio/src/assets/imagem/portfoliomobile.png) 
+
 
 
 
@@ -66,13 +56,12 @@ npm run start
 
 ### ```Botão Projetos ``` 
  - Contém os projetos recentes e que considero os melhores.
- ### ```Botão Habilidades``` 
- -  Contém minhas habilidades que aprendi e estão sendo desenvolvidas no momento, e ferramentas que utilizo.
+
 ## ``` Botão Sobre``` 
- - Um resumo razoável da minha profissional e pessoal.
-## ``` Botão DownloadCV``` 
+ - Um resumo razoável da minha vida profissional e pessoal, e hard-skills.
+## ```  DownloadCV``` 
  - Poderá fazer download do meu curriculum atualizado.
- ## ``` Botôes redes-sociais``` 
+ ## ``` redes-sociais``` 
  - Github e Linkedin que será redirecionado para páginas respectivamente . 
 >  [Topo](#ancora)	
 
